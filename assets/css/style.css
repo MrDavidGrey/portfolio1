@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidebar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: "Bai Jamjuree";
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+a:hover {
+    color: var(--color-brand);
+}img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand2);
+}
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0px var(--color-brand);
+}
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--color-base);
+    background-color: var(--color-brand);
+}
+/* Navbar responsive */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+    
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand2);
+}
+
+
+@media (min-width: 992px) {
+    
+.navbar {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)), url(../images/city.jpg);
+    background-size: cover;
+
+
+}
+.navbar-brand img {
+    border: 8px solid var(--color-brand);
+}
+}
+/* Content wrapper */
+#content-wrapper {
+    padding-left: var(--sidebar-width);
+}
+/* Btn */
+.btn {
+    padding: 12px 28px;
+    font-weight: 500;
+}
+.btn-brand {
+    background-color: #deff58;
+    border-color: var(--color-brand2);
+    color: var(--color-base);
+}
+.btn-brand:hover {
+    background-color: var(--color-base);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+    border-color: #fff;
+
+    
+}
+.link-custom {
+    font-weight: 500;
+    position: relative;
+}
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* Project display section styling */
+/* Card */
+.card-custom .card-custom-image {
+    overflow: hidden;
+
+}
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+
+
+/* testimonial slider trial */
+.testimonial-area {
+    padding: 80px 0;
+
+}
+.section-header h4 {
+    color: var(--color-brand);
+    font-weight: 600;
+}
+.section-header {
+    padding-bottom: 15px;
+}
+.section-header h2 {
+    font-weight: 700px;
+}.section-header p {
+    color: var(--color-base2);
+    width: 40%;
+    margin: auto;
+}.icon-areas {
+    text-align: center;
+}
+.icon-areas i {
+    color: var(--color-brand2);
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.content p {
+    color: var(--color-brand2);
+    width: 60%;
+    margin: auto;
+}
+.person {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid var(--color-brand2);
+    margin-top: 50px;
+}
+.person img {
+    width: 100%;
+    height: 100%;
+}
+.person img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.content h5 {
+    font-weight: 900;
+    margin-top: 15px;
+}
+.carousel-indicators {
+    bottom: -80px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 60px;
+    height: 10px;
+    background-color: var(--color-brand2);
+}
+@media (max-width: 768px) and (max-width: 991px) {
+    .section-header p {
+        width: 85%;
+    }
+    .content p {
+        width: 95%;
+    }
+
+    
+}
+@media (max-width: 767px) {
+    .testimonial-area {
+        padding: 30px 0;
+    }
+    .section-header p {
+        width: 95%;
+    }
+    .content p {
+        width: 100%;
+    }
+    .icon-areasi {
+        font-size: 50px;
+    }
+    
+}
+textarea {
+    resize: none;
+}
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: white;
+}
+#contact .form-control:focus {
+    border-color: var(--color-brand2);
+    box-shadow: none;
+}
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+#contact input.form-control {
+    height: 50px;
+}
+/* testimonial slider trial end */
+
+/* faq accordion */
+.accordion-item {
+    background: var(--color-base);
+    color: white;
+}
+.accordion {
+    background: var(--color-brand2);
+    
+}
+.accordion-button{
+    background-color: rgb(34, 57, 1);
+    box-shadow: none !important;
+    color: white;
+
+}
+.accordion-button:hover {
+    background-color: #022a30;
+}
+
+
+/* map */
+.map {
+    
+    width: auto;
+    padding-top: 10px;
+}
+
